@@ -1,0 +1,60 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.scoreboard {
+  text-align: right;
+  font-size: 32px;
+}
+
+.score--right {
+  color: green;
+  margin-right: 5px;
+}
+
+.score--wrong {
+  color: red;
+  margin-left: 5px;
+}
+
+.result {
+  height: 42px;
+}
+
+.result--wrong {
+  color: red;
+}
+
+.result--correct {
+  color: green;
+}
+
+.choices {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.choice {
+  margin: 5px;
+  height: 32px;
+  width: 80px;
+  border: none;
+}
+
+.choice--red {
+  background-color: red;
+  color: white;
+}
+
+.choice--green {
+  background-color: green;
+  color: white;
+}
+
+.game-over .scoreboard {
+  text-align: center !important;
+}
