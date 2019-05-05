@@ -1,27 +1,28 @@
 import React from 'react'
 
 const Choices = (props) => {
-  const isRightAnswer = props.answer === props.rightAnswer
+  const highlightButton = props.answer === props.rightAnswer ? 'choice--green' : 'choice--red'
+
   return (
     <div className='choices'>
       <button
         disabled={props.locked}
-        className={`choice ${props.rightAnswer === 'der' && (isRightAnswer ? 'choice--green' : 'choice--red')}`}
-        onClick={() => props.submitAnswer('der')}
+        className={`choice ${props.rightAnswer === 'Der' && highlightButton}`}
+        onClick={() => props.submitAnswer('Der')}
       >
         der
       </button>
       <button
         disabled={props.locked}
-        className={`choice ${props.rightAnswer === 'die' && (isRightAnswer ? 'choice--green' : 'choice--red')}`}
-        onClick={() => props.submitAnswer('die')}
+        className={`choice ${props.rightAnswer === 'Die' && highlightButton}`}
+        onClick={() => props.submitAnswer('Die')}
       >
         die
       </button>
       <button
         disabled={props.locked}
-        className={`choice ${props.rightAnswer === 'das' && (isRightAnswer ? 'choice--green' : 'choice--red')}`}
-        onClick={() => props.submitAnswer('das')}
+        className={`choice ${props.rightAnswer === 'Das' && highlightButton}`}
+        onClick={() => props.submitAnswer('Das')}
       >
         das
       </button>

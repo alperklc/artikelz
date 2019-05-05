@@ -1,5 +1,8 @@
+import { loadWords as loadWordsFromCloud } from './data';
 
 const initialState = {
+  words: [],
+  loading: true,
   cursor: 0,
   locked: false,
   rightCount: 0,
@@ -10,8 +13,18 @@ const initialState = {
   rightAnswer: '',
 }
 
+const loadWords = async (state, setState) => {
+  const { data } = await loadWordsFromCloud()
+
+  setState({
+    ...state,
+    words: [...data],
+    loading: false,
+  })
+}
+
 const answeredState = (state, setState, answer, words) => {
-  const rightAnswer = words[state.cursor].article
+  const rightAnswer = state.words[state.cursor].article
 
   setState({
     ...state,
@@ -23,7 +36,7 @@ const answeredState = (state, setState, answer, words) => {
       result: 'Correct !',
     } : {
       wrongCount: ++state.wrongCount,
-      wrongAnswers: state.wrongAnswers.push(words[state.cursor]),
+      wrongAnswers: state.wrongAnswers.push(state.words[state.cursor]),
       result: 'Wrong :/',
     })
   })
@@ -44,4 +57,4 @@ const loadNextQuestion = (state, setState) => {
   })
 }
 
-export { initialState, answeredState, loadNextQuestion }
+export { initialState, answeredState, loadNextQuestion, loadWords }
