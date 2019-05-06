@@ -8,8 +8,8 @@ Potential improvements:
 - Better looking UI
 - Storing the high score on the browser cookies and make it more exciting
 - Letting user to define the length of the game (20 questions, 50 questions, until closing the browser window)
-- Proof the correctness of articles (won't make it, really)
-- Enhance the vocabulary
+- Proof the correctness of articles (won't make it, really - just added 70K words)
+- ~Enhance the vocabulary~
 - Wrap the whole thing as a react-native project and distribute on the app stores
 - And maybe making it something generic, not just for German articles
 
