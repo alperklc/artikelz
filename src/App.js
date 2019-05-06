@@ -24,11 +24,11 @@ function App () {
     e.preventDefault()
 
     if (e.keyCode === LEFT_ARROW_KEY_CODE) {
-      submitAnswer('Der')
+      submitAnswer('der')
     } else if (e.keyCode === UP_ARROW_KEY_CODE) {
-      submitAnswer('Die')
+      submitAnswer('die')
     } else if (e.keyCode === RIGHT_ARROW_KEY_CODE) {
-      submitAnswer('Das')
+      submitAnswer('das')
     }
   }
 

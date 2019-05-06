@@ -7,22 +7,22 @@ const Choices = (props) => {
     <div className='choices'>
       <button
         disabled={props.locked}
-        className={`choice ${props.rightAnswer === 'Der' && highlightButton}`}
-        onClick={() => props.submitAnswer('Der')}
+        className={`choice ${props.rightAnswer === 'der' && highlightButton}`}
+        onClick={() => props.submitAnswer('der')}
       >
         der
       </button>
       <button
         disabled={props.locked}
-        className={`choice ${props.rightAnswer === 'Die' && highlightButton}`}
-        onClick={() => props.submitAnswer('Die')}
+        className={`choice ${props.rightAnswer === 'die' && highlightButton}`}
+        onClick={() => props.submitAnswer('die')}
       >
         die
       </button>
       <button
         disabled={props.locked}
-        className={`choice ${props.rightAnswer === 'Das' && highlightButton}`}
-        onClick={() => props.submitAnswer('Das')}
+        className={`choice ${props.rightAnswer === 'das' && highlightButton}`}
+        onClick={() => props.submitAnswer('das')}
       >
         das
       </button>
