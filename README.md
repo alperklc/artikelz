@@ -1,5 +1,7 @@
 ## Artikelz
 
+Click here to play: https://alperklc.github.io/artikelz/
+
 I made this for my personal usage, for challenging myself with random nouns of German language. It's been almost a decade since I started learning this language and I'm still failing at finding the right article for a noun. I wrote this on the train ride home, will optimize and make it nice looking later.
 
 Potential improvements:
